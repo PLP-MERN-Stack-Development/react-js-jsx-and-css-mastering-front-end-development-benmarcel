@@ -1,12 +1,23 @@
     // import React from 'react'
     
-    const HomePage = () => {
-      return (
-        <div className=" h-full dark:bg-gray-900 dark:text-white w-full mx-auto p-4 md:p-8 text-black font-sans antialiased justify-center items-center flex flex-col">
-            <h1 className="text-4xl font-bold mb-4">Welcome to Task Flow</h1>
-            <p className="text-lg">Your one-stop solution for managing tasks efficiently.</p>
-        </div>
-      )
-    }
-    
-    export default HomePage
+   // Note: The main layout component (App.js, Layout.js, etc.)
+// should handle the overall min-h-screen and the flex-col structure.
+
+const HomePage = () => {
+  return (
+    // 'flex-grow' ensures this component takes up all available vertical space
+    // that isn't used by the navbar or footer.
+    <main className="grow flex flex-col items-center justify-center p-8">
+      <div className="text-center text-black dark:text-white max-w-xl">
+        <h1 className="text-6xl font-black mb-4 tracking-tighter md:text-7xl">
+          TaskFlow 🚀
+        </h1>
+        <p className="text-xl text-gray-500 dark:text-gray-300 font-normal">
+          Master your workflow. Ship projects faster.
+        </p>
+      </div>
+    </main>
+  );
+};
+
+export default HomePage;
